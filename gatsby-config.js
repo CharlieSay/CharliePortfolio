@@ -1,8 +1,28 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Charlie Say | Portfolio`,
+    name: `Charlie Say`,
+    description: `Creative freelancer from Manchester UK.`,
+    author: `@charliesay`,
+    social: {
+      twitter: '//twitter.com/charliesay_',
+      instagram: '//instagram.com/charliesay',
+      behance: '//www.behance.net/charliewsab1fe',
+    },
+    footerLinks: [
+      {
+        name: 'ABOUT',
+        url: '/about'
+      },
+      {
+        name: 'PORTFOLIO',
+        url: '/portfolio'
+      },
+      {
+        name: 'CONTACT',
+        url: '/contact-me'
+      }
+    ]
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

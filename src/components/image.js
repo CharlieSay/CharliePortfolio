@@ -1,39 +1,39 @@
-import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import safeGet from 'lodash.get'
+import React, { useMemo } from "react"
+import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
 
-/*
- * This component is built using `gatsby-image` to automatically serve optimized
- * images with lazy loading and reduced file sizes. The image is loaded using a
- * `useStaticQuery`, which allows us to load the image from directly within this
- * component, rather than having to pass the image data down from pages.
- *
- * For more information, see the docs:
- * - `gatsby-image`: https://gatsby.dev/gatsby-image
- * - `useStaticQuery`: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
-const ProfilePicture = () => {
+const Image = ({ src, ...props }) => {
   const data = useStaticQuery(graphql`
     query {
-      placeholderImage: file(relativePath: { eq: "profile.png" }) {
-        childImageSharp {
-          fixed(width: 200) {
-            ...GatsbyImageSharpFixed
+      allFile( filter: { internal: { mediaType: { regex: "images/" } } } ) {
+        nodes {
+          relativePath
+          childImageSharp {
+            fluid(maxWidth: 300) {
+              ...GatsbyImageSharpFluid_noBase64
+            }
           }
         }
       }
     }
   `)
 
-  return (
+  const match = useMemo(() => (
+    data.allFile.nodes.find(({ relativePath }) => src === relativePath)
+  ), [ data, src ])
+
+  const fluid = safeGet(match, 'childImageSharp.fluid')
+
+  return fluid ? (
     <Img
-      fadeIn="true"
-      style={{ borderRadius: `150px` }}
-      loading={"eager"}
-      fluid={data.placeholderImage.childImageSharp.fixed}
+      fluid={fluid}
+      fadeIn={true}
+      durationFadeIn={1500}
+      Tag='div'
+      {...props}
     />
-  )
+  ) : null
 }
 
-export default ProfilePicture
+export default Image

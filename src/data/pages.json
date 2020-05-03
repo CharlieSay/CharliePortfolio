@@ -1,0 +1,24 @@
+[
+    {
+        "title":"Video",
+        "slug":"videopage",
+        "description":"this is a thicc description",
+        "homeThumb": "`${__dirname}/src/images/video_editing.png`",
+        "elements" : {
+            "title":"Overcome - Audacious Youth",
+            "description":"You overcome I know that theres more",
+            "preview": "Wmkl1BmstmE"
+        }
+    },
+    {
+        "title":"Graphic Design",
+        "slug":"graphics",
+        "description":"this is a thicc graphic deisgn desription",
+        "homeThumb": "",
+        "elements" : {
+            "title":"",
+            "description":"",
+            "preview": "Wmkl1BmstmE"
+        }
+    }
+]

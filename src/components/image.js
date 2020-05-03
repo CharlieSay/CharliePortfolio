@@ -17,7 +17,7 @@ const ProfilePicture = () => {
   const data = useStaticQuery(graphql`
     query {
       placeholderImage: file(relativePath: { eq: "profile.png" }) {
-        imageSharp {
+        childImageSharp {
           fixed(width: 200) {
             ...GatsbyImageSharpFixed
           }
@@ -31,7 +31,7 @@ const ProfilePicture = () => {
       fadeIn="true"
       style={{ borderRadius: `150px` }}
       loading={"eager"}
-      fluid={data.placeholderImage.imageSharp.fixed}
+      fluid={data.placeholderImage.childImageSharp.fixed}
     />
   )
 }

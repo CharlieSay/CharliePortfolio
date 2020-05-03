@@ -1,12 +1,18 @@
+
+
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  color: #FFFFFF;
+  font-family: "primary";
 }
 body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #101723;
+  font-family: "primary";
 }
 article,
 aside,
@@ -63,6 +69,7 @@ dfn {
 h1 {
   font-size: 2em;
   margin: 0.67em 0;
+  font-family: "primary";
 }
 mark {
   background-color: #ff0;
@@ -229,7 +236,7 @@ h1 {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: 1.45rem;
-  color: inherit;
+  color: #FFFFFF;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
@@ -385,6 +392,8 @@ p {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: 1.45rem;
+  color: #FFFFFF;
+  font-family: "primary";
 }
 figure {
   margin-left: 0;
@@ -619,4 +628,9 @@ pre tt:after {
   html {
     font-size: 100%;
   }
+}
+
+@font-face {
+  font-family: primary;
+  src: url("../fonts/primary-font.ttf");
 }

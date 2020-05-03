@@ -1,0 +1,13 @@
+.footer__container {
+    display:flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.footer__link {
+    font-family: "primary";
+}
+
+.footer__link:hover {
+    color: red;
+}

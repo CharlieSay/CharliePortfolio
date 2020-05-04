@@ -1,18 +1,22 @@
 [
     {
         "title":"Video",
-        "thumbnail":"video-editing.png"
+        "thumbnail":"video-small.png",
+        "pageLocation":"/video"
     },
     {
         "title":"Graphic Design",
-        "thumbnail":"graphic-design.png"
+        "thumbnail":"graphic-small.png",
+        "pageLocation":"/graphic-design"
     },
     {
         "title":"Software Engineering",
-        "thumbnail":"programming.png"
+        "thumbnail":"programming-small.png",
+        "pageLocation":"/programming"
     },
     {
         "title":"Music",
-        "thumbnail":"music.png"
+        "thumbnail":"music-small.png",
+        "pageLocation":"/music"
     }
 ]

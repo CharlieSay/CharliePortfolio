@@ -46,17 +46,15 @@
 
   &__navigation {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     height: 210px;
-    width: 900px;
+    width: 100%;
 
     &__thumbnail {
-      text-align: center;
+      width: 230px;
       white-space: nowrap;
-
-      &__imagewrapper{
-        height: 100px;
-        width: 225px;
+      p {
+        text-align: center;
       }
     }
   }

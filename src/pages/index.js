@@ -1,5 +1,5 @@
 import React from "react"
-
+import { Link } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Image from "../components/image"
@@ -33,13 +33,15 @@ const IndexPage = () => (
         </div>
       </div>
       <div className="index__about__navigation">
-        {pages.map((data) => (
-          <div className="index__about__navigation__thumbnail">
-            <p>{data.title.toUpperCase()}</p>
-            <div className="index__about__navigation__thumbnail__imagewrapper">
-            <Image src={data.thumbnail} />
+        {pages.map(data => (
+          <Link to={data.pageLocation} style={{textDecoration: `none`}}>
+            <div className="index__about__navigation__thumbnail">
+              <p>{data.title.toUpperCase()}</p>
+              <div className="index__about__navigation__thumbnail__imagewrapper">
+                <Image src={data.thumbnail} />
+              </div>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </div>

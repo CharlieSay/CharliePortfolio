@@ -12,7 +12,7 @@ module.exports = {
     footerLinks: [
       {
         name: 'ABOUT',
-        url: '/about'
+        url: '/'
       },
       {
         name: 'PORTFOLIO',

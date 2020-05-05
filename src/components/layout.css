@@ -634,3 +634,8 @@ pre tt:after {
   font-family: primary;
   src: url("../fonts/primary-font.ttf");
 }
+
+@font-face {
+  font-family: secondary;
+  src: url("../fonts/secondary-font.ttf");
+}

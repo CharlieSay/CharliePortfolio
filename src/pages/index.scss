@@ -22,6 +22,11 @@
     width: 300px;
   }
 
+  &__image img:hover {
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transform: scale(1.05);
+  }
   &__text {
     max-width: 600px;
     text-align: end;
@@ -46,15 +51,28 @@
 
   &__navigation {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    padding-top: 50px;
     height: 210px;
     width: 100%;
 
     &__thumbnail {
-      width: 230px;
-      white-space: nowrap;
+      width: 210px;
+      position: relative;
       p {
+        font-size: 15px;
+        position: absolute;
         text-align: center;
+        z-index: 999;
+        text-shadow: 2px 2px 8px black;
+        top: 50px;
+        width: 100%;
+      }
+    }
+
+    &__thumbnail:hover {
+      p {
+        color: red;
       }
     }
   }

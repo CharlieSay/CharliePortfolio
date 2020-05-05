@@ -11,7 +11,7 @@ import "./index.scss"
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <div className="index" style={{ paddingTop: `100px` }}>
+    <div className="index" style={{ paddingTop: `75px` }}>
       <div className="index__about">
         <div className="index__about__image">
           <Image src={"profile.png"} style={{ borderRadius: `150px` }} />
@@ -34,14 +34,14 @@ const IndexPage = () => (
       </div>
       <div className="index__about__navigation">
         {pages.map(data => (
-          <Link to={data.pageLocation} style={{textDecoration: `none`}}>
-            <div className="index__about__navigation__thumbnail">
-              <p>{data.title.toUpperCase()}</p>
-              <div className="index__about__navigation__thumbnail__imagewrapper">
+          <div className="index__about__navigation__thumbnail">
+            <Link to={data.pageLocation} style={{ textDecoration: `none` }}>
+            <div className="index__about__navigation__thumbnail__imagewrapper">
                 <Image src={data.thumbnail} />
               </div>
-            </div>
-          </Link>
+              <p>{data.title.toUpperCase()}</p>
+            </Link>
+          </div>
         ))}
       </div>
     </div>

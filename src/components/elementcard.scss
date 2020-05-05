@@ -1,0 +1,20 @@
+.video__element {
+    display: flex;
+    justify-content: space-between;
+    width: 900px;
+
+    &__info {
+        width: 400px;
+        h1 {
+            font-family: "Primary";
+            font-size: 25px;
+            text-align: right;
+        }
+
+        h2 {
+            font-family: "Secondary";
+            font-size: 15px;
+            color: white;
+        }
+    }
+}

@@ -1,0 +1,27 @@
+.footer__container {
+  display: flex;
+  justify-content: space-around;
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+  }
+
+  &__social {
+    display: flex;
+    width: 150px;
+    justify-content: space-between;
+    svg:hover {
+      fill: red;
+    }
+  }
+
+  .footer__link {
+    font-family: "primary";
+  }
+
+  .footer__link:hover {
+    color: red;
+  }
+}

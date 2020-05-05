@@ -1,7 +1,7 @@
 import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import ElementCard from "../components/elementCard"
+import ElementCard from "../components/elementcard"
 
 import content from "../data/videopage.json"
 

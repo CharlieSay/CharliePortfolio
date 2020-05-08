@@ -1,0 +1,40 @@
+.form__container {
+  display: flex;
+  width: 600px;
+  justify-content: center;
+  color: white;
+
+  form {
+    input {
+      width: 600px;
+      font-family: "Arial";
+    }
+    textarea {
+      width: 600px;
+    }
+    p {
+      margin: 15px;
+      margin-left: 0px;
+      text-transform: uppercase;
+    }
+  }
+  &__buttons {
+    display: flex;
+    justify-content: space-evenly;
+    button {
+      width: 150px;
+      padding-top: 2.5px;
+      margin-top: 20px;
+
+      font-family: "Primary";
+      padding: 14px 28px;
+      font-size: 16px;
+
+      cursor: pointer;
+
+      border-color: white;
+      color: white;
+      background-color: transparent;
+    }
+  }
+}

@@ -67,7 +67,14 @@
         text-shadow: 2px 2px 8px black;
         top: 50px;
         width: 100%;
+        @media all and (max-width:837px) {
+          font-size: 10px;
+        }
       }
+    }
+
+    @media all and (max-width:837px) {
+      display: flex;
     }
 
     &__thumbnail:hover {

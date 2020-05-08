@@ -14,7 +14,7 @@ const IndexPage = () => (
     <div className="index" style={{ paddingTop: `75px` }}>
       <div className="index__about">
         <div className="index__about__image">
-          <Image src={"profile.png"} style={{ borderRadius: `150px` }} />
+          <Image alt='YOOO THIS IS ME' src={"profile.png"} style={{ borderRadius: `150px` }} />
         </div>
         <div className="index__about__text">
           <div className="index__about__text__hey">

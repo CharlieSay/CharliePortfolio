@@ -16,11 +16,11 @@ module.exports = {
       },
       {
         name: 'PORTFOLIO',
-        url: '/portfolio'
+        url: '/'
       },
       {
         name: 'CONTACT',
-        url: '/contact-me'
+        url: '/contact'
       }
     ]
   },

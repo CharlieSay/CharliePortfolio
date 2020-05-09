@@ -18,8 +18,17 @@
   display: flex;
   justify-content: space-between;
 
+  @media all and (max-width: 409px) {
+    flex-direction: column;
+  }
+
   &__image {
     width: 300px;
+    @media all and (max-width: 409px) {
+      margin: auto;
+      padding-bottom: 30px;
+      width: 50%;
+    }
   }
 
   &__image img:hover {
@@ -31,7 +40,10 @@
     max-width: 600px;
     text-align: end;
     padding-left: 50px;
-
+    @media all and (max-width: 409px) {
+      margin: auto;
+      padding: 0;
+    }
     &__hey {
       h1 {
         text-align: right;

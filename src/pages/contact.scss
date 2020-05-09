@@ -1,16 +1,16 @@
 .form__container {
   display: flex;
-  width: 600px;
+  width: 100%;
   justify-content: center;
   color: white;
 
   form {
-    input {
+    input, textarea {
       width: 600px;
       font-family: "Arial";
-    }
-    textarea {
-      width: 600px;
+      @media all and (max-width: 1200px) {
+          width: 300px;
+      }
     }
     p {
       margin: 15px;
@@ -36,6 +36,14 @@
       color: white;
       background-color: transparent;
       transition: 0.5s;
+
+      @media all and (max-width: 1200px) {
+        width: 75px;
+        height: 40px;
+        font-size: 10px;
+        white-space: nowrap;
+        padding: 6px;
+      }
     }
 
     button:hover{

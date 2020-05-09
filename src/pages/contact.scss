@@ -5,11 +5,12 @@
   color: white;
 
   form {
-    input, textarea {
+    input,
+    textarea {
       width: 600px;
       font-family: "Arial";
       @media all and (max-width: 1200px) {
-          width: 300px;
+        width: 300px;
       }
     }
     p {
@@ -46,7 +47,7 @@
       }
     }
 
-    button:hover{
+    button:hover {
       border-color: red;
     }
   }

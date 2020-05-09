@@ -35,6 +35,11 @@
       border-color: white;
       color: white;
       background-color: transparent;
+      transition: 0.5s;
+    }
+
+    button:hover{
+      border-color: red;
     }
   }
 }

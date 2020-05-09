@@ -9,7 +9,7 @@ const Contact = () => (
   <Layout>
     <SEO title="Contact Me" />
     <div className="form__container aligner">
-      <form method="post">
+      <form method="post" netlify-honeypot="bot-field" data-netlify="true">
         <label>
           <p>Name</p>
           <input type="text" name="name" id="name" />

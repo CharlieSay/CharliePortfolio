@@ -35,7 +35,6 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sass`,
-    `gatsby-eslint-plugin`,
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,

@@ -14,6 +14,7 @@ const encode = data => {
 class ContactForm extends React.Component {
   constructor(props) {
     super(props)
+    this.ContactForm = React.createRef();
     this.state = {
       name: "",
       email: "",
@@ -47,9 +48,9 @@ class ContactForm extends React.Component {
         <div className="form__container aligner">
           {!submitted && (
           <form
+            netlify
+            name="contact"
             method="post"
-            data-netlify-recaptcha="true"
-            data-netlify="true"
             onSubmit={this.handleSubmit}
           >
             <label>

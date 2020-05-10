@@ -14,7 +14,11 @@ const IndexPage = () => (
     <div className="index" style={{ paddingTop: `75px` }}>
       <div className="index__about">
         <div className="index__about__image">
-          <Image alt='YOOO THIS IS ME' src={"profile.png"} style={{ borderRadius: `150px` }} />
+          <Image
+            alt="YOOO THIS IS ME"
+            src={"profile.png"}
+            style={{ borderRadius: `150px` }}
+          />
         </div>
         <div className="index__about__text">
           <div className="index__about__text__hey">
@@ -36,7 +40,7 @@ const IndexPage = () => (
         {pages.map(data => (
           <div className="index__about__navigation__thumbnail">
             <Link to={data.pageLocation} style={{ textDecoration: `none` }}>
-            <div className="index__about__navigation__thumbnail__imagewrapper">
+              <div className="index__about__navigation__thumbnail__imagewrapper">
                 <Image src={data.thumbnail} />
               </div>
               <p>{data.title.toUpperCase()}</p>

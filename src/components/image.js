@@ -1,4 +1,4 @@
-import safeGet from 'lodash.get'
+import safeGet from "lodash.get"
 import React, { useMemo } from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
@@ -6,7 +6,7 @@ import Img from "gatsby-image"
 const Image = ({ src, ...props }) => {
   const data = useStaticQuery(graphql`
     query {
-      allFile( filter: { internal: { mediaType: { regex: "images/" } } } ) {
+      allFile(filter: { internal: { mediaType: { regex: "images/" } } }) {
         nodes {
           relativePath
           childImageSharp {
@@ -19,18 +19,19 @@ const Image = ({ src, ...props }) => {
     }
   `)
 
-  const match = useMemo(() => (
-    data.allFile.nodes.find(({ relativePath }) => src === relativePath)
-  ), [ data, src ])
+  const match = useMemo(
+    () => data.allFile.nodes.find(({ relativePath }) => src === relativePath),
+    [data, src]
+  )
 
-  const fluid = safeGet(match, 'childImageSharp.fluid')
+  const fluid = safeGet(match, "childImageSharp.fluid")
 
   return fluid ? (
     <Img
       fluid={fluid}
       fadeIn={true}
       durationFadeIn={1500}
-      Tag='div'
+      Tag="div"
       {...props}
     />
   ) : null

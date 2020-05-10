@@ -10,7 +10,9 @@ const Video = () => (
     <SEO title="Home" />
     {content.map(data => (
       <>
-        <p style={{display: "flex", justifyContent: "center"}}>{data.title.toUpperCase()}</p>
+        <p style={{ display: "flex", justifyContent: "center" }}>
+          {data.title.toUpperCase()}
+        </p>
 
         {data.elements.map(data => (
           <>

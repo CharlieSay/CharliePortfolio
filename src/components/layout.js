@@ -18,14 +18,14 @@ const Layout = ({ children }) => {
     query SiteTitleQuery {
       site {
         siteMetadata {
-          title,
-          name,
+          title
+          name
           social {
-            instagram,
-            behance,
+            instagram
+            behance
             twitter
-          },
-          footerLinks{
+          }
+          footerLinks {
             name
             url
           }
@@ -45,7 +45,7 @@ const Layout = ({ children }) => {
         }}
       >
         <main>{children}</main>
-        <Footer footerLinks={data.site.siteMetadata.footerLinks}/>
+        <Footer footerLinks={data.site.siteMetadata.footerLinks} />
       </div>
     </>
   )

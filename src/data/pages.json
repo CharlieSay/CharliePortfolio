@@ -1,22 +1,22 @@
 [
-    {
-        "title":"Video",
-        "thumbnail":"video-small.png",
-        "pageLocation":"/video"
-    },
-    {
-        "title":"Graphic Design",
-        "thumbnail":"graphic-small.png",
-        "pageLocation":"/graphic-design"
-    },
-    {
-        "title":"Software Engineering",
-        "thumbnail":"programming-small.png",
-        "pageLocation":"/programming"
-    },
-    {
-        "title":"Music",
-        "thumbnail":"music-small.png",
-        "pageLocation":"/music"
-    }
+  {
+    "title": "Video",
+    "thumbnail": "video-small.png",
+    "pageLocation": "/video"
+  },
+  {
+    "title": "Graphic Design",
+    "thumbnail": "graphic-small.png",
+    "pageLocation": "/graphic-design"
+  },
+  {
+    "title": "Software Engineering",
+    "thumbnail": "programming-small.png",
+    "pageLocation": "/programming"
+  },
+  {
+    "title": "Music",
+    "thumbnail": "music-small.png",
+    "pageLocation": "/music"
+  }
 ]

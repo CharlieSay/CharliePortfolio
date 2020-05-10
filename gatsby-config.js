@@ -5,24 +5,24 @@ module.exports = {
     description: `Creative freelancer from Manchester UK.`,
     author: `@charliesay`,
     social: {
-      twitter: '//twitter.com/charliesay_',
-      instagram: '//instagram.com/charliesay',
-      behance: '//www.behance.net/charliewsab1fe',
+      twitter: "//twitter.com/charliesay_",
+      instagram: "//instagram.com/charliesay",
+      behance: "//www.behance.net/charliewsab1fe",
     },
     footerLinks: [
       {
-        name: 'ABOUT',
-        url: '/'
+        name: "ABOUT",
+        url: "/",
       },
       {
-        name: 'PORTFOLIO',
-        url: '/'
+        name: "PORTFOLIO",
+        url: "/",
       },
       {
-        name: 'CONTACT',
-        url: '/contact'
-      }
-    ]
+        name: "CONTACT",
+        url: "/contact",
+      },
+    ],
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -35,6 +35,7 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sass`,
+    `gatsby-eslint-plugin`,
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,

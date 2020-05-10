@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Charlie Say <charliewsay@gmail.com>",
   "dependencies": {
+    "eslint-config-react-app": "^5.2.1",
     "gatsby": "^2.20.25",
     "gatsby-image": "^2.3.4",
     "gatsby-plugin-manifest": "^2.3.5",
@@ -38,8 +39,7 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
-    "heroku-postbuild": "gatsby build"
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "repository": {
     "type": "git",

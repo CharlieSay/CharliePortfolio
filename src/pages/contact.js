@@ -14,16 +14,24 @@ const encode = data => {
 class ContactForm extends React.Component {
   constructor(props) {
     super(props)
-    this.state = { name: "", email: "", message: "", subject: "" }
+    this.state = {
+      name: "",
+      email: "",
+      message: "",
+      subject: "",
+      submitted: false
+    }
   }
 
   handleSubmit = e => {
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "contact", ...this.state }),
+      body: encode({ "form-name": "contact", ...this.state })
     })
-      .then(() => alert("Success!"))
+      .then(() => {
+        this.setState({ submitted: true })
+      })
       .catch(error => alert(error))
 
     e.preventDefault()
@@ -32,14 +40,15 @@ class ContactForm extends React.Component {
   handleChange = e => this.setState({ [e.target.name]: e.target.value })
 
   render() {
-    const { name, email, message, subject } = this.state
+    const { name, email, message, subject, submitted } = this.state
     return (
       <Layout>
         <SEO title="Contact Me" />
         <div className="form__container aligner">
+          {!submitted && (
           <form
             method="post"
-            netlify-honeypot="bot-field"
+            data-netlify-recaptcha="true"
             data-netlify="true"
             onSubmit={this.handleSubmit}
           >
@@ -90,6 +99,17 @@ class ContactForm extends React.Component {
               </button>
             </div>
           </form>
+          )}
+          {submitted && (
+            <div className="success">
+            <p>
+              Thanks for contacting me!
+            </p>
+            <p>
+              Your enquiry has been submitted and I will reply as soon as i can!
+            </p>
+            </div>
+          )}
         </div>
       </Layout>
     )
